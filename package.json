@@ -1,0 +1,55 @@
+{
+  "name": "@startupbros/pi-wsl-clipboard-image",
+  "version": "0.1.0",
+  "description": "WSL-first clipboard image bridge for Pi that saves Windows clipboard screenshots to temp files and inserts their paths into the editor.",
+  "keywords": [
+    "pi",
+    "pi-package",
+    "pi-extension",
+    "pi-coding-agent",
+    "wsl",
+    "windows",
+    "clipboard",
+    "image",
+    "screenshot",
+    "powershell"
+  ],
+  "type": "module",
+  "files": [
+    "extensions/",
+    "examples/",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/index.ts"
+    ]
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm typecheck"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.26.2",
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@mariozechner/pi-coding-agent": "^0.57.1",
+    "@types/node": "^24.10.2",
+    "typescript": "^5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StartupBros/pi-wsl-clipboard-image.git"
+  },
+  "bugs": {
+    "url": "https://github.com/StartupBros/pi-wsl-clipboard-image/issues"
+  },
+  "homepage": "https://github.com/StartupBros/pi-wsl-clipboard-image#readme",
+  "author": "StartupBros",
+  "license": "MIT"
+}

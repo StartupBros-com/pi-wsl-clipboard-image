@@ -1,0 +1,10 @@
+[
+  {
+    "key": "f6",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "/screenshot\r"
+    },
+    "when": "terminalFocus"
+  }
+]
