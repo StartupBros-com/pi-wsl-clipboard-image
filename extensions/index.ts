@@ -3,8 +3,6 @@ import os from "node:os";
 import { join } from "node:path";
 import type { ExtensionAPI, ExtensionContext } from "@mariozechner/pi-coding-agent";
 
-const STATUS_KEY = "wsl-clipboard-image";
-const STATUS_TEXT = "F6 screenshot · /screenshot · /hotkeys";
 const POWERSHELL_CANDIDATES = [
   "/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
   "/mnt/c/Program Files/PowerShell/7/pwsh.exe",
@@ -178,22 +176,6 @@ function registerClipboardCommand(pi: ExtensionAPI, name: string, description: s
 }
 
 export default function wslClipboardImage(pi: ExtensionAPI): void {
-  pi.on("session_start", async (_event, ctx) => {
-    if (!ctx.hasUI || !isWsl()) {
-      return;
-    }
-
-    ctx.ui.setStatus(STATUS_KEY, STATUS_TEXT);
-  });
-
-  pi.on("session_shutdown", async (_event, ctx) => {
-    if (!ctx.hasUI) {
-      return;
-    }
-
-    ctx.ui.setStatus(STATUS_KEY, undefined);
-  });
-
   registerClipboardCommand(
     pi,
     "clipimg",

@@ -31,7 +31,6 @@ This package uses PowerShell only as a **Windows clipboard adapter**, not as you
 - `/clipimg` — save the current Windows clipboard image and insert its path into the editor
 - `/screenshot` — friendlier alias for the same action
 - `F6` — shortcut for the same screenshot workflow
-- footer status hint on WSL sessions
 
 ## Install
 
