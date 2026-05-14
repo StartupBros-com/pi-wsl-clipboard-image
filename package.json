@@ -35,10 +35,10 @@
   },
   "packageManager": "pnpm@10.26.2",
   "peerDependencies": {
-    "@mariozechner/pi-coding-agent": "*"
+    "@earendil-works/pi-coding-agent": "*"
   },
   "devDependencies": {
-    "@mariozechner/pi-coding-agent": "^0.57.1",
+    "@earendil-works/pi-coding-agent": "^0.74.0",
     "@types/node": "^24.10.2",
     "typescript": "^5.9.3"
   },
